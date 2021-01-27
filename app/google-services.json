@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "568518102512",
+    "project_id": "chatsimpleapp-76926",
+    "storage_bucket": "chatsimpleapp-76926.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568518102512:android:834162b689b37512dba135",
+        "android_client_info": {
+          "package_name": "com.vikination.chatapponeononesample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568518102512-53g3nlksehl9ek3aifc8mjb7g7vlp5h0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4fREbYzIz2v-4h59ZgDKYo25GR5s6ijU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568518102512-53g3nlksehl9ek3aifc8mjb7g7vlp5h0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
