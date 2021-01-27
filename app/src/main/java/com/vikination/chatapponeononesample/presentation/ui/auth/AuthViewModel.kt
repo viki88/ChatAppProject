@@ -3,7 +3,6 @@ package com.vikination.chatapponeononesample.presentation.ui.auth
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -18,7 +17,7 @@ class AuthViewModel @ViewModelInject constructor(private val authUseCase: AuthUs
         authResponse.postValue(Response.loading(null))
         authUseCase.signin(email, password){
             if (it.isSuccessful){
-                authResponse.postValue(Response.success(Firebase.auth.currentUser))
+                authResponse.postValue(Response.success(Firebase.auth.currentUser, message = "Sign in Success, Welcome"))
             }else{
                 authResponse.postValue(Response.error(it.exception?.message?:"Authentication is Failed"))
             }
@@ -31,7 +30,7 @@ class AuthViewModel @ViewModelInject constructor(private val authUseCase: AuthUs
         authResponse.postValue(Response.loading(null))
         authUseCase.signup(email, password){
             if (it.isSuccessful){
-                authResponse.postValue(Response.success(Firebase.auth.currentUser))
+                authResponse.postValue(Response.success(Firebase.auth.currentUser, message = "Sign up for email $email Success, Welcome"))
             }else{
                 authResponse.postValue(Response.error(it.exception?.message?:"Authentication is Failed"))
             }

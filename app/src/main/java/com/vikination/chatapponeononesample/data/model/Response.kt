@@ -7,7 +7,7 @@ data class Response<out T>(val status :Status, val data :T?, val message :String
     }
 
     companion object{
-        fun <T> success(data :T) :Response<T> = Response(Status.SUCCESS, data, null)
+        fun <T> success(data :T, message: String? = null) :Response<T> = Response(Status.SUCCESS, data, message)
         fun <T> error(message: String, data :T? = null) :Response<T> = Response(Status.ERROR, data, message)
         fun <T> loading(data :T? = null) :Response<T> = Response(Status.LOADING, data, null)
     }
