@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.home.MainActivity">
+    tools:context=".presentation.ui.contactlist.ContactListActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_home"
+        android:id="@+id/toolbar_contactlist"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/purple_500"
@@ -17,28 +17,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactlist_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_home" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_contactlist" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/new_chat_button"
+        android:id="@+id/add_new_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_home"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_contactlist"
         android:layout_margin="16dp"
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintHorizontal_bias="1.0"
         android:backgroundTint="@color/purple_500"
-        android:src="@drawable/ic_new_conv"/>
+        android:src="@drawable/ic_add"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

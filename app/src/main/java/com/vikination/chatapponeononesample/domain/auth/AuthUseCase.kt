@@ -2,6 +2,7 @@ package com.vikination.chatapponeononesample.domain.auth
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
+import com.google.firebase.database.DatabaseReference
 import com.vikination.chatapponeononesample.data.repository.AuthRepository
 import javax.inject.Inject
 

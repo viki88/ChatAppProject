@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.vikination.chatapponeononesample.data.model.Response
 import com.vikination.chatapponeononesample.databinding.ActivityAuthBinding
 import com.vikination.chatapponeononesample.presentation.ui.home.MainActivity
+import com.vikination.chatapponeononesample.utils.Utils
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -71,7 +72,7 @@ class AuthActivity : AppCompatActivity() {
                 false
             }
 
-            !isEmailValid(binding.emailInput.text.toString()) -> {
+            !Utils.isEmailValid(binding.emailInput.text.toString()) -> {
                 binding.emailInput.error = "Please fill with valid email address"
                 false
             }
@@ -83,7 +84,5 @@ class AuthActivity : AppCompatActivity() {
 
             else -> true
         }
-
-    private fun isEmailValid(email :String) :Boolean = android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
 
 }

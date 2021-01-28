@@ -12,6 +12,7 @@ import com.vikination.chatapponeononesample.R
 import com.vikination.chatapponeononesample.databinding.ActivityMainBinding
 import com.vikination.chatapponeononesample.presentation.ui.auth.AuthActivity
 import com.vikination.chatapponeononesample.presentation.ui.auth.AuthViewModel
+import com.vikination.chatapponeononesample.presentation.ui.contactlist.ContactListActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         setupToolbar()
 
+        binding.newChatButton.setOnClickListener { startActivity(Intent(this, ContactListActivity::class.java)) }
     }
 
     private fun setupToolbar(){

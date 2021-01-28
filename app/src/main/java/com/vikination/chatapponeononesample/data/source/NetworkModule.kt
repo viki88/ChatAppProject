@@ -1,5 +1,6 @@
 package com.vikination.chatapponeononesample.data.source
 
+import com.google.firebase.database.FirebaseDatabase
 import com.vikination.chatapponeononesample.data.repository.AuthRepository
 import com.vikination.chatapponeononesample.data.repository.AuthRepositoryImpl
 import dagger.Module
@@ -15,4 +16,8 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideAuthRepository() :AuthRepository = AuthRepositoryImpl()
+
+    @Provides
+    @Singleton
+    fun provideFirebaseDatabase() :FirebaseDatabase = FirebaseDatabase.getInstance()
 }
